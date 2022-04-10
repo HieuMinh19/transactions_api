@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Bank < ApplicationRecord
-	validates_presence_of :name, :message => "Bank name must be not null"
+  validates :name, presence: true, on: :create
 end
